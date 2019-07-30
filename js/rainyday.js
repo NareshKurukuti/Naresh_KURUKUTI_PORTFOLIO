@@ -664,7 +664,6 @@ RainyDay.prototype.prepareBackground = function(width, height) {
 	var context = this.background.getContext("2d");
 	context.clearRect(0, 0, width, height);
 //	context.drawImage(this.img, 0, 0, width, height);
-
 	if (isNaN(this.blurRadius) || this.blurRadius < 1) return;
 
 	this.stackBlurCanvasRGB(0, 0, width, height, this.blurRadius);
