@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+<html lang="en-US" oncontextmenu="return false">
+    <head>
+        <style media="screen" type="text/css">
+            img {
+                /*display: none;*/
+            }
+            body {
+                overflow: hidden;
+            }
+            #canvas {
+                position: absolute;
+                top: 0px;
+                left: 0px;
+            }
+        </style>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Naresh K</title>
+        <meta name="description" content="Creative CV is a HTML resume template for professionals. Built with Bootstrap 4, Now UI Kit and FontAwesome, this modern and responsive design template is perfect to showcase your portfolio, skils and experience."/>
+        <link rel="shortcut icon" href="naresh.k.ico"> 
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet">
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+        <link href="css/aos.css" rel="stylesheet">
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="styles/main.css" rel="stylesheet">
+        <script src="js/rainyday.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            function getURLParameter(name) {
+                return decodeURIComponent((new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(location.search) || [, ""])[1].replace(/\+/g, '%20')) || null;
+            }
+
+            function demo() {
+                var image = document.getElementById('background');
+                image.onload = function () {
+                    var engine = new RainyDay('canvas', 'background', window.innerWidth, window.innerHeight, 1, getURLParameter("blur") || 20);
+                    
+                    var preset = getURLParameter("preset") || 1;
+                    
+                    if (preset == 1) {
+                        engine.gravity = engine.GRAVITY_NON_LINEAR;
+                        engine.trail = engine.TRAIL_DROPS;
+                        engine.rain([engine.preset(3, 3, 0.88), engine.preset(5, 5, 0.9), engine.preset(6, 2, 1)], 100);
+                    } else if (preset == 2) {
+                        engine.gravity = engine.GRAVITY_NON_LINEAR;
+                        engine.trail = engine.TRAIL_DROPS;
+                        engine.VARIABLE_GRAVITY_ANGLE = Math.PI / 8;
+                        engine.rain([engine.preset(0, 2, 0.5), engine.preset(4, 4, 1)], 50);
+                    } else if (preset == 3) {
+                        engine.gravity = engine.GRAVITY_NON_LINEAR;
+                        engine.trail = engine.TRAIL_SMUDGE;
+                        engine.rain([engine.preset(0, 2, 0.5), engine.preset(4, 4, 1)], 50);
+                    }
+                };
+                image.crossOrigin = "anonymous";
+                image.src = "images/frontPageMain.jpg";
+            }
+        </script>
+    </head>
+    <body id="top" onload="demo();">
+        <header>
+            <div class="profile-page sidebar-collapse">
+                <nav class="navbar navbar-expand-lg fixed-top navbar-transparent bg-primary" color-on-scroll="400">
+                    <div class="container">
+                        <div class="navbar-translate"><a class="navbar-brand" href="#" rel="tooltip">Naresh Kurukuti</a>
+                            <button class="navbar-toggler navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-bar bar1"></span><span class="navbar-toggler-bar bar2"></span><span class="navbar-toggler-bar bar3"></span></button>
+                        </div>
+                        <div class="collapse navbar-collapse justify-content-end" id="navigation">
+                            <ul class="navbar-nav">
+                                <li class="nav-item"><a class="nav-link smooth-scroll" href="#about">About</a></li>
+                                <li class="nav-item"><a class="nav-link smooth-scroll" href="#skill">Skills</a></li>
+                                <li class="nav-item"><a class="nav-link smooth-scroll" href="#experience">Experience</a></li>
+                                <li class="nav-item"><a class="nav-link smooth-scroll" href="#portfolio">Portfolio</a></li>
+                                <li class="nav-item"><a class="nav-link smooth-scroll" href="#education">Education</a></li>
+                                <li class="nav-item"><a class="nav-link smooth-scroll" href="#contact">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <div class="page-content">
+            <div>
+                <div class="profile-page">
+                    <div class="wrapper">
+                        <div class="page-header page-header-small" filter-color="green">
+                            <img id="background" src="" class="page-header-image" data-parallax="true"/>
+                            <canvas id="canvas"></canvas>
+                            <!--<div class="page-header-image" data-parallax="true" style="background-image: url('images/frontPageMain.jpg');"></div>-->
+                            <div class="container">
+                                <div class="content-center" style="margin-top:30px;">
+                                    <div class="cc-profile-image"><a href="#"><img src="images/naresh.k.jpg" alt="Image"/></a></div>
+                                    <div class="h2 title">Naresh Kurukuti</div>
+                                    <p class="category text-white">Web Developer</p><a class="btn btn-primary smooth-scroll mr-2" href="#contact" data-aos="zoom-in" data-aos-anchor="data-aos-anchor">Hire Me</a><a class="btn btn-primary" href="RESUMES/NARESH_KURUKUTI.pdf" data-aos="zoom-in" data-aos-anchor="data-aos-anchor" target="_blank" download>Download CV</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="section" id="about">
+                    <div class="container">
+                        <div class="card" data-aos="fade-up" data-aos-offset="10">
+                            <div class="row">
+                                <div class="col-lg-6 col-md-12">
+                                    <div class="card-body">
+                                        <div class="h4 mt-0 title">About</div>
+                                        <p>Hello! I am <b> Naresh Kurukuti </b>working as Web Developer ......</p>
+
+                                        <p class="justify">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Looking forward for an opportunity to work in a challenging environment where I can explore my potentials can help in acquiring the organizational goals.</p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-12">
+                                    <div class="card-body">
+                                        <div class="h4 mt-0 title">Basic Information</div>
+                                        <div class="row">
+                                            <div class="col-sm-4"><strong class="text-uppercase">Name:</strong></div>
+                                            <div class="col-sm-8">Naresh KURUKUTI</div>
+                                        </div>
+
+                                        <div class="row mt-3">
+                                            <div class="col-sm-4"><strong class="text-uppercase">Qualification:</strong></div>
+                                            <div class="col-sm-8">M.Tech</div>
+                                        </div>
+                                        <div class="row mt-3">
+                                            <div class="col-sm-4"><strong class="text-uppercase">Age:</strong></div>
+                                            <div class="col-sm-8">24</div>
+                                        </div>
+
+                                        <div class="row mt-3">
+                                            <div class="col-sm-4"><strong class="text-uppercase">Language:</strong></div>
+                                            <div class="col-sm-8">English, Telugu</div>
+                                        </div>
+                                        <div class="row mt-3">
+                                            <div class="col-sm-4"><strong class="text-uppercase"></strong></div>
+                                            <div class="col-sm-8"></div>
+                                        </div>
+                                        <div class="row mt-3">
+                                            <div class="col-sm-4"><strong class="text-uppercase"></strong></div>
+                                            <div class="col-sm-8"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="section" id="skill">
+                    <div class="container">
+                        <div class="h4 text-center mb-4 title">Professional Skills</div>
+                        <div class="card" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="progress-container progress-primary"><span class="progress-badge">HTML</span>
+                                            <div class="progress">
+                                                <div class="progress-bar progress-bar-primary" data-aos="progress-full" data-aos-offset="10" data-aos-duration="2000" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 70%;"></div><span class="progress-value">70%</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="progress-container progress-primary"><span class="progress-badge">PHP</span>
+                                            <div class="progress">
+                                                <div class="progress-bar progress-bar-primary" data-aos="progress-full" data-aos-offset="10" data-aos-duration="2000" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 70%;"></div><span class="progress-value">70%</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="progress-container progress-primary"><span class="progress-badge">JavaScript</span>
+                                            <div class="progress">
+                                                <div class="progress-bar progress-bar-primary" data-aos="progress-full" data-aos-offset="10" data-aos-duration="2000" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;"></div><span class="progress-value">60%</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="progress-container progress-primary"><span class="progress-badge">MySQL</span>
+                                            <div class="progress">
+                                                <div class="progress-bar progress-bar-primary" data-aos="progress-full" data-aos-offset="10" data-aos-duration="2000" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 70%;"></div><span class="progress-value">70%</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="progress-container progress-primary"><span class="progress-badge">JQUERY</span>
+                                            <div class="progress">
+                                                <div class="progress-bar progress-bar-primary" data-aos="progress-full" data-aos-offset="10" data-aos-duration="2000" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;"></div><span class="progress-value">60%</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="progress-container progress-primary"><span class="progress-badge">CSS</span>
+                                            <div class="progress">
+                                                <div class="progress-bar progress-bar-primary" data-aos="progress-full" data-aos-offset="10" data-aos-duration="2000" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 40%;"></div><span class="progress-value">40%</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="progress-container progress-primary"><span class="progress-badge">Angular js</span>
+                                            <div class="progress">
+                                                <div class="progress-bar progress-bar-primary" data-aos="progress-full" data-aos-offset="10" data-aos-duration="2000" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 40%;"></div><span class="progress-value">40%</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="progress-container progress-primary"><span class="progress-badge">Codeigniter</span>
+                                            <div class="progress">
+                                                <div class="progress-bar progress-bar-primary" data-aos="progress-full" data-aos-offset="10" data-aos-duration="2000" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 65%;"></div><span class="progress-value">65%</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="section">
+                    <div class="container">
+                        <h2 class="h4 text-center mb-4 title">Work Experiences</h2>
+                        <div class="card" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+                            <div class="page" id="experience">
+                                <div class="page__demo">
+                                    <div class="main-container page__container">
+                                        <div class="timeline">
+                                            <div class="timeline__group">
+                                                <span class="timeline__year">VIVENNS GLOBAL PVT LTD.<br>2017 Oct - Present </span>
+                                                <br>
+                                                <div class="timeline__box">
+                                                    <div class="timeline__date">
+                                                        <span class="timeline__day">1</span>
+                                                        <span class="timeline__month"></span>
+                                                    </div>
+                                                    <div class="timeline__post">
+                                                        <div class="timeline__content">
+                                                            <center>
+                                                                <span class="center"><b><a href="www.applyonce.online" target="_blank">www.applyonce.online</a></b></span>
+                                                            </center>
+                                                            <p class="justify">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ApplyOnce is a collection of the International and Domestic students information is to allow for the associated Educational Providers and authorized Agents for the purpose of your current and future course of study applications including verification and validations. ApplyOnce platform is for the user groups namely: Applicants, Agents and Providers.  The service relates to these three entities for the primary objective of Applicant able to submit a course application to the Provider with or without an Agent association. Applicant can store his/her information and documents that they can reuse without the need for manual or multiple entries of the same information</p>
+                                                        </div>
+                                                    </div>
+                                                </div> 
+                                            </div>
+                                            <div class="timeline__group">
+                                                <span class="timeline__year">AppMinds Technlogy Services Pvt. Ltd.,<br>2016-Aug to SEP 2017</span>
+                                                <br>
+                                                <div class="timeline__box">
+                                                    <div class="timeline__date">
+                                                        <span class="timeline__day">2</span>
+                                                        <span class="timeline__month"></span>
+                                                    </div>
+                                                    <div class="timeline__post">
+                                                        <div class="timeline__content">
+                                                            <center>
+                                                                <span class="center"><b><a href="www.kuwboo.com" target="_blank">www.kuwboo.com</a></b></span>
+                                                            </center>
+                                                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Kuwboo was born free and stay free!  It is a social network and share everything with the people in your life and also with world.  Kuwboo is one of leading social network in upcoming days, because of many advantages such as
+                                                            <ul>
+                                                                <li>we can create your own online business, packed full of advantages.</li>
+                                                                <li>Lots of games to play packed full of fun.</li>
+                                                                <li>Find the any discounts products that members post.</li>
+                                                                <li>Share the things with people.</li>
+                                                            </ul>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="timeline__box">
+                                                    <div class="timeline__date">
+                                                        <span class="timeline__day">3</span>
+                                                        <span class="timeline__month"></span>
+                                                    </div>
+                                                    <div class="timeline__post">
+                                                        <div class="timeline__content"> <center>
+                                                                <span class="center"><b><a href="www.xplorationstation.com" target="_blank">www.xplorationstation.com</a></b></span>
+                                                            </center>
+                                                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Kuwboo was born free and stay free!  It is a social network and share everything with the people in your life and also with world.  Kuwboo is one of leading social network in upcoming days, because of many advantages such as
+                                                            <ul>
+                                                                <li>we can create your own online business, packed full of advantages.</li>
+                                                                <li>Lots of games to play packed full of fun.</li>
+                                                                <li>Find the any discounts products that members post.</li>
+                                                                <li>Share the things with people.</li>
+                                                            </ul>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="timeline__box">
+                                                    <div class="timeline__date">
+                                                        <span class="timeline__day">4</span>
+                                                        <span class="timeline__month"></span>
+                                                    </div>
+                                                    <div class="timeline__post">
+                                                        <div class="timeline__content"> <center>
+                                                                <span class="center"><b><a href="www.aplnexted.com" target="_blank">www.aplnexted.com</a></b></span>
+                                                            </center>
+                                                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;APL is the first and only Faculty Talent Solution with a software enabled faculty marketplace.  APL’s mission is to connect college deans, chairs, and directors with the most qualified experts and faculty and to provide software tools, digital resources, and a robust network to support:
+                                                            <ul>
+                                                                <li>Efficient and effective faculty hiring.</li>
+                                                                <li>Increased understanding and adoption of best practices for teaching and learning.</li>
+                                                                <li>Greater affiliation between academics and practitioners to promote higher learning outcomes.</li>
+                                                                <li>A comprehensive forum for faculty sharing, this project has developed with Kohana Frame work and Twig templates
+                                                                </li>
+                                                            </ul>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div> 
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="section" id="portfolio">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-6 ml-auto mr-auto">
+                                <div class="h4 text-center mb-4 title">Portfolio</div>
+                                <div class="nav-align-center">
+                                    <ul class="nav nav-pills nav-pills-primary" role="tablist">
+                                        <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#web-development" role="tablist"><i class="fa fa-laptop" aria-hidden="true"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-content gallery mt-5">
+                            <div class="tab-pane active" id="web-development">
+                                <div class="ml-auto mr-auto">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+                                                <a href="https://applyonce.online/" target="_blank">
+                                                    <figure class="cc-effect">
+                                                        <!--<img src="images/project-1.jpg" alt="Image"/>-->
+                                                        <img src="images/Applyonce.png" alt="Image"/ width="540" height="359">
+                                                             <figcaption>
+                                                            <div class="h4">Recent Project</div>
+                                                            <p>Web Development</p>
+                                                        </figcaption>
+                                                    </figure></a>
+                                            </div>
+                                            <div class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+                                                <a href="https://aplnexted.com/" target="_blank">
+                                                    <figure class="cc-effect">
+                                                        <!--<img src="images/project-2.jpg" alt="Image"/>-->
+                                                        <img src="images/Aplnk.png" alt="Image" width="540" height="359" />
+                                                        <figcaption>
+                                                            <div class="h4">E Learning</div>
+                                                            <p>Web Development</p>
+                                                        </figcaption>
+                                                    </figure></a>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+                                                <a href="http://kuwboo.com/#/" target="_blank">
+                                                    <figure class="cc-effect">
+                                                        <!--<img src="images/project-3.jpg" alt="Image"/>-->
+                                                        <img src="images/Kuwboo.png" alt="Image" width="540" height="359"/>
+                                                        <figcaption>
+                                                            <div class="h4">Food Order Project</div>
+                                                            <p>Web Development</p>
+                                                        </figcaption>
+                                                    </figure></a></div>
+                                            <div class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+                                                <a href="http://www.xplorationstation.com/" target="_blank">
+                                                    <figure class="cc-effect">
+                                                        <!--<img src="images/project-4.jpg" alt="Image"/>-->
+                                                        <img src="images/Xploration.png" alt="Image" width="540" height="359"/> 
+                                                        <figcaption>
+                                                            <div class="h4">Xploration Station is a science-based television network</div>
+                                                            <p>Web Development</p>
+                                                        </figcaption>
+                                                    </figure></a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> 
+                        </div>
+                    </div>
+                </div>
+                <div class="section" id="education">
+                    <div class="container cc-education">
+                        <div class="h4 text-center mb-4 title">Education</div>
+                        <div class="card">
+                            <div class="row">
+                                <div class="col-md-3 bg-primary" data-aos="fade-right" data-aos-offset="50" data-aos-duration="500">
+                                    <div class="card-body cc-education-header">
+                                        <p>2015 - 2017</p>
+                                        <div class="h5">Master's Degree</div>
+                                    </div>
+                                </div>
+                                <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
+                                    <div class="card-body">
+                                        <div class="h5">Master of VLSI Design</div>
+                                        <p class="category">University of JNTU Ananthapur</p>
+                                        <table class="table" style="table table-bordered table-striped">
+                                            <tr>
+                                                <td>College Name</td><td data-toggle="tooltip" data-placement="right" title="Vaagdevi Institute of Technology and Science">VITS</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Percentage of Marks</td><td>74% </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="row">
+                                <div class="col-md-3 bg-primary" data-aos="fade-right" data-aos-offset="50" data-aos-duration="500">
+                                    <div class="card-body cc-education-header">
+                                        <p>2012 - 2015</p>
+                                        <div class="h5">Bachelor's Degree</div>
+                                    </div>
+                                </div>
+                                <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
+                                    <div class="card-body">
+                                        <div class="h5">Bachelor of Electronics and Communication Engineering</div>
+                                        <p class="category">University of  JNTU Ananthapur</p>
+                                        <table class="table" style="table table-bordered table-striped">
+                                            <tr>
+                                                <td>College Name</td><td data-toggle="tooltip" data-placement="right" title="Vaagdevi Institute of Technology and Science">VITS</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Percentage of Marks</td><td>74% </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="row">
+                                <div class="col-md-3 bg-primary" data-aos="fade-right" data-aos-offset="50" data-aos-duration="500">
+                                    <div class="card-body cc-education-header">
+                                        <p>2009 - 2012</p>
+                                        <div class="h5">Diploma</div>
+                                    </div>
+                                </div>
+                                <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
+                                    <div class="card-body">
+                                        <div class="h5">Diploma in Electronics and Communication Engineering</div>
+                                        <p class="category">Board of SBTET</p>
+                                        <table class="table" style="table table-bordered table-striped">
+                                            <tr>
+                                                <td>College Name</td><td data-toggle="tooltip" data-placement="right" title="Govt. Polytechnic Proddatur">Polytechnic</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Percentage of Marks</td><td>86% </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="row">
+                                <div class="col-md-3 bg-primary" data-aos="fade-right" data-aos-offset="50" data-aos-duration="500">
+                                    <div class="card-body cc-education-header">
+                                        <p>2009</p>
+                                        <div class="h5">SSC</div>
+                                    </div>
+                                </div>
+                                <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
+                                    <div class="card-body">
+                                        <div class="h5">Science and Mathematics</div>
+                                        <p class="category">School of Secondary board</p>
+                                        <table class="table" style="table table-bordered table-striped">
+                                            <tr>
+                                                <td>School Name</td><td data-toggle="tooltip" data-placement="right" title="Municipal High School Proddatur">M.H. School</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Percentage of Marks</td><td>78% </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--<div class="section" id="contact">
+                  <div class="cc-contact-information" style="background-image: url('images/staticmap.png');">
+                    <div class="container">
+                      <div class="cc-contact">
+                        <div class="row">
+                                 <div class="col-md-9">
+                            <div class="card mb-0" data-aos="zoom-in">
+                              <div class="h4 text-center title">Contact Me</div>
+                              <div class="row">
+                                <div class="col-md-6">
+                                  <div class="card-body">
+                                     <div id="" style="width:100%;height:400px;"></div>
+                                  </div>
+                                </div>
+                                <div class="col-md-6">
+                                  <div class="card-body">
+                                                  <center>
+                                                                <p class="mb-0"><strong>Address </strong></p>
+                                                                <p class="pb-2">28/80, Rameswaram, Proddatur, Kadapa(D), Andhrapradesh</p>
+                                                                <p class="mb-0"><strong>Phone</strong></p>
+                                                                <p class="pb-2">8309973127</p>
+                                                                <p class="mb-0"><strong>Email</strong></p>
+                                                                <p>nareshkurukuti79@gmail.com</p>
+                                                  </center>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>-->
+
+                <div class="section" id="contact">
+                    <div class="container">
+                        <div class="card" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div id="map" style="width:100%;height:400px;"></div>
+                                </div> 
+                                <div class="col-md-6">
+                                    <div class="card-body"> 
+                                        <div class="h4 text-center title">Contact Me</div> 
+                                        <p class="mb-0"><strong>Address </strong></p>
+                                        <p class="pb-2">28/80, Rameswaram, Proddatur, Kadapa(D), Andhrapradesh</p>
+                                        <p class="mb-0"><strong>Phone</strong></p>
+                                        <p class="pb-2">8309973127</p>
+                                        <p class="mb-0"><strong>Email</strong></p>
+                                        <p>nareshkurukuti79@gmail.com</p> 
+                                    </div>
+                                </div> 
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="content-wrapper">
+            <h1></h1>
+            <div id="stop" class="scrollTop pull-right"  style="position: fixed;right: 2%;bottom: 0px;padding: 0px;opacity: 0;transition: all 0.4s ease-in-out 0s;">
+                <span><a href="javascript:void(0)"  id="scrollColr" style="font-size:40px;color:#58488F;">
+                        <i class="fa fa-chevron-circle-up" aria-hidden="true"></i>
+                    </a></span>
+            </div> 
+        </div>
+        <footer class="" style="background-color:#58488F;height:88px !important">
+            <div class="title text-center" style="font-size: 1.714em;padding-top: 15px;color:#58488F;">Naresh Kurukuti</div>
+            <div class="text-center text-muted">
+                <p>&copy; All rights reserved to - <a class="credit" href="http://www.nareshk.epizy.com" target="_blank">nareshk.epizy.com</a></p>
+            </div>
+        </footer>
+        <script src="js/core/jquery.3.2.1.min.js"></script>
+        <script src="js/core/popper.min.js"></script>
+        <script src="js/core/bootstrap.min.js"></script>
+        <script src="js/now-ui-kit.js?v=1.1.0"></script>
+        <script src="js/aos.js"></script>
+        <script src="scripts/main.js"></script>
+        <script>
+            $(document).ready(function () {
+                var scrollTop = $(".scrollTop");
+                $(window).scroll(function () {
+                    var topPos = $(this).scrollTop();
+                    if (topPos > 100) {
+                        $('.scrollTop').css("opacity", "1");
+                    } else {
+                        $(scrollTop).css("opacity", "0");
+                    }
+                    if (topPos > 3573) {
+                        $('#scrollColr').css({'color': 'white', 'backgroun-color': 'white'});
+                    } else if (topPos < 3573) {
+                        $('#scrollColr').css({'color': '#58488F'});
+                    }
+                });
+                //rgba(84,68,157,0.95)
+                $('.scrollTop').click(function () {
+                    $('html, body').animate({
+                        scrollTop: 0
+                    }, 300);
+                    return false;
+                });
+
+            });
+
+        </script>
+        <script>
+            $(document).keydown(function (e) {
+                if (e.which === 123) {
+                    return false;
+                }
+            });
+        </script>
+    </body>
+
+
+    <style>
+        .timeline{
+            --uiTimelineMainColor: var(--timelineMainColor, #222);
+            --uiTimelineSecondaryColor: var(--timelineSecondaryColor, #fff);
+
+            position: relative;
+            padding-top: 3rem;
+            padding-bottom: 3rem;
+        }
+
+        .timeline:before{
+            content: "";
+            width: 4px;
+            height: 100%;
+            background-color: var(--uiTimelineMainColor);
+
+            position: absolute;
+            top: 0;
+        }
+
+        .timeline__group{
+            position: relative;
+        }
+
+        .timeline__group:not(:first-of-type){
+            margin-top: 4rem;
+        }
+
+        .timeline__year{
+            padding: .5rem 1.5rem;
+            color: var(--uiTimelineSecondaryColor);
+            background-color: var(--uiTimelineMainColor);
+
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        .timeline__box{
+            position: relative;
+        }
+
+        .timeline__box:not(:last-of-type){
+            margin-bottom: 30px;
+        }
+
+        .timeline__box:before{
+            content: "";
+            width: 100%;
+            height: 2px;
+            background-color: var(--uiTimelineMainColor);
+
+            position: absolute;
+            left: 0;
+            z-index: -1;
+        }
+
+        .timeline__date{
+            min-width: 65px;
+            position: absolute;
+            left: 0;
+
+            box-sizing: border-box;
+            padding: .5rem 1.5rem;
+            text-align: center;
+
+            background-color: var(--uiTimelineMainColor);
+            color: var(--uiTimelineSecondaryColor);
+        }
+
+        .timeline__day{
+            font-size: 2rem;
+            font-weight: 700;
+            display: block;
+        }
+
+        .timeline__month{
+            display: block;
+            font-size: .8em;
+            text-transform: uppercase;
+        }
+
+        .timeline__post{
+            padding: 1.5rem 2rem;
+            border-radius: 2px;
+            border-left: 3px solid var(--uiTimelineMainColor);
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .12), 0 1px 2px 0 rgba(0, 0, 0, .24);
+            background-color: var(--uiTimelineSecondaryColor);
+        }
+
+        @media screen and (min-width: 641px){
+
+            .timeline:before{
+                left: 30px;
+            }
+
+            .timeline__group{
+                padding-top: 55px;
+            }
+
+            .timeline__box{
+                padding-left: 80px;
+            }
+
+            .timeline__box:before{
+                top: 50%;
+                transform: translateY(-50%);  
+            }  
+
+            .timeline__date{
+                top: 50%;
+                margin-top: -27px;
+            }
+        }
+
+        @media screen and (max-width: 640px){
+
+            .timeline:before{
+                left: 0;
+            }
+
+            .timeline__group{
+                padding-top: 40px;
+            }
+
+            .timeline__box{
+                padding-left: 20px;
+                padding-top: 70px;
+            }
+
+            .timeline__box:before{
+                top: 90px;
+            }    
+
+            .timeline__date{
+                top: 0;
+            }
+        }
+
+        .timeline{
+            --timelineMainColor: #58488F;
+            font-size: 16px;
+        }
+
+        @media screen and (min-width: 768px){
+
+            html{
+                font-size: 62.5%;
+            }
+        }
+
+        @media screen and (max-width: 767px){
+
+            html{
+                font-size: 55%;
+            }
+        }
+
+        /*
+        * demo page
+        */
+
+        @media screen and (min-width: 768px){
+
+            html{
+                font-size: 62.5%;
+            }
+        }
+
+        @media screen and (max-width: 767px){
+
+            html{
+                font-size: 50%;
+            }
+        }
+
+        body{
+            font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Open Sans, Ubuntu, Fira Sans, Helvetica Neue, sans-serif;
+            font-size: 1.6rem;
+            color: #222;
+
+            background-color: #f0f0f0;
+            margin: 0;
+            -webkit-overflow-scrolling: touch;   
+            overflow-y: scroll;
+        }
+
+        p{
+            margin-top: 0;
+            margin-bottom: 1.5rem;
+            line-height: 1.5;
+        }
+
+        p:last-child{
+            margin-bottom: 0;
+        }
+
+        .page{
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+
+        .page__demo{
+            flex-grow: 1;
+        }
+
+        .main-container{
+            max-width: 960px;
+            padding-left: 2rem;
+            padding-right: 2rem;
+
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .page__container{
+            padding-top: 30px;
+            padding-bottom: 30px;
+            max-width: 800px;
+        }
+
+        .footer{
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            text-align: center;  
+            font-size: 1.4rem;
+        }
+
+        .footer__link{
+            text-decoration: none;
+            color: inherit;
+        }
+
+        @media screen and (min-width: 361px){
+
+            .footer__container{
+                display: flex;
+                justify-content: space-between;
+            }
+        }
+
+        @media screen and (max-width: 360px){
+
+            .melnik909{
+                display: none;
+            } 
+        }
+    </style>
+</html>
+<script>
+    function initMap() {
+        var locationCity = {lat: 17.3850, lng: 78.4867};
+        var map = new google.maps.Map(
+                document.getElementById('map'), {zoom: 4, center: locationCity});
+        var marker = new google.maps.Marker({position: locationCity, map: map});
+    }
+</script>
+<script 
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDwRahjZsyhIOjbXR2JW96vL8Cu5oII6VI&callback=initMap">
+</script>
